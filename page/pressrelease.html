@@ -16,7 +16,14 @@
 <link rel="stylesheet" href="../css/pressrelease.css" />
 </head>
 <body>
-
+<div id="rs-header"></div>
+  <script>
+    fetch("../page/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("rs-header").innerHTML = data;
+        if (typeof initNavbar === "function") { initNavbar(); }
+      });</script>
 <div class="topbar"></div>
 
 <div class="hero">
@@ -127,7 +134,17 @@
     <span>Full press release:</span>
     <a href="https://www.einpresswire.com/article/921786705" target="_blank" rel="noopener">einpresswire.com/article/921786705</a>
   </div>
+ <!-- _____footer_______-->
+  <div id="rs-footer"></div>
+  <script>
+    fetch("../page/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("rs-footer").innerHTML = data;
+      });</script>
 
+  <script src="../js/nav.js"></script>
+  <script src="../js/dental.js"></script>
 </div>
 </body>
 </html>
