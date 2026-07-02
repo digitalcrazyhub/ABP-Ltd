@@ -192,7 +192,7 @@ html{
 }
 
 .hero-sub {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--text-dark);
     line-height: 1.7;
     margin-bottom: 36px;
@@ -845,7 +845,7 @@ section {
 
     .image-box img {
         width: 130%;
-        left: -120px;
+        left: 5px;
     }
 
     .services-grid {

@@ -616,7 +616,7 @@
   }
 
   .stage {
-    background: var(--lavender-light);
+    background: var(--white);
     border: 0.5px solid var(--border);
     border-radius: var(--radius-sm);
     padding: .85rem .75rem;
