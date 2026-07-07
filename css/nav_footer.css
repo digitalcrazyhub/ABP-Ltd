@@ -395,7 +395,7 @@
 }
 
 .abpf-grid{
-    max-width:1950px;
+    max-width:2950px;
     margin:auto;
     display:grid;
     grid-template-columns:2fr 1fr 1fr 1.5fr;
