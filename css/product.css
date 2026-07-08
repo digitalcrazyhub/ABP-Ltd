@@ -68,7 +68,7 @@ body {
 
 
 section {
-    padding: 110px 0;
+    padding: 10px 0;
 }
 
 img {
@@ -208,7 +208,7 @@ a {
 }
 
 .heros-content h1 {
-    font-size: clamp(2rem, 1.4rem + 3vw, 60px);
+    font-size:64px;
     line-height: 1.15;
     margin-bottom: 25px;
     font-weight: 700;
@@ -216,7 +216,7 @@ a {
 }
 
 .heros-content p {
-    font-size: clamp(0.95rem, 0.85rem + 0.5vw, 20px);
+    font-size: 18px;
     line-height: 1.8;
     
     margin-bottom: 35px;
@@ -292,7 +292,7 @@ a {
 
 .sc-about-content h3 {
     font-size: clamp(1.75rem, 1.3rem + 2vw, 48px);
-    color: var(--navy);
+    color: var(--navy-brand);
     margin-bottom: 18px;
     line-height: 1.1;
      font-family: "Jost", sans-serif;
@@ -300,14 +300,14 @@ a {
 
 .sc-about-content h4 {
     font-size: clamp(1.1rem, 0.95rem + 0.7vw, 24px);
-    color: var(--blue-mid);
+    color: var(--navy-brand);
     margin-bottom: 25px;
     line-height: 1.5;
     font-weight: 600;
 }
 
 .sc-about-content p {
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    font-size: 18px;
     line-height: 1.9;
     color: var(--text-dark);
     margin-bottom: 18px;
@@ -323,10 +323,11 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
+    padding: 94px 8%;
 }
 
 .sc-vision-card {
-    background: #f7faff;
+    background: var(--purple-mid);
     padding: 50px 40px;
     border-radius: 28px;
     border: 1px solid rgba(0, 86, 214, 0.08);
@@ -341,13 +342,13 @@ a {
 
 .sc-vision-card h3 {
     font-size: clamp(1.5rem, 1.3rem + 1vw, 34px);
-    color: var(--navy);
+    color: var(--purple-brand);
     margin-bottom: 20px;
      font-family: "Jost", sans-serif;
 }
 
 .sc-vision-card p {
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    font-size: 18px;
     line-height: 1.9;
     color: var(--text-dark);
 }
@@ -368,13 +369,13 @@ a {
 
 .dual-section .section-leads {
     color: var(--white);
-    max-width: 620px;
+    
     line-height: 25px;
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    font-size: 18px;
 }
 
 .dual-section .section-eyebrow {
-    color: var(--accent);
+    color: var(--white);
 }
 
 .dual-section .section-eyebrow::before {
@@ -434,9 +435,10 @@ a {
 }
 
 .dual-card-text {
-    color: var(--light);
+    color: var(--white);
     line-height: 1.7;
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    font-size: 18px;
+    text-align: justify;
 }
 
 .neovascular-box {
@@ -450,14 +452,15 @@ a {
 
 .neovascular-title {
     font-size: clamp(1.25rem, 1.1rem + 0.6vw, 26px);
-    color: var(--accent);
+    color: var(--white);
     font-weight: 600;
     margin-bottom: 6px;
 }
 
 .neovascular-text {
-    color: var(--light);
+    color: var(--white);
     line-height: 1.7;
+    font-size: 18px;
 }
 
 .neovascular-ref {
@@ -473,7 +476,7 @@ a {
 
 .science-sections {
     background: var(--purple-mid);
-    padding: clamp(60px, 6vw, 100px) 5%;
+    padding: 94px 8%;
 }
 
 .science-sections .section-eyebrow {
@@ -492,8 +495,8 @@ a {
 }
 
 .science-sections .section-leads {
-    max-width: 700px;
-    font-size: clamp(1rem, .95rem + .25vw, 1.15rem);
+    
+    font-size: 18px;
     line-height: 1.7;
     margin-bottom: 50px;
 }
@@ -596,8 +599,9 @@ a {
 }
 
 .science-point-text {
-    font-size: 1rem;
+    font-size: 18px;
     line-height: 1.7;
+    text-align: justify;
 }
 
 /* ===============================
@@ -694,7 +698,7 @@ a {
 .about-product {
     width: 90%;
     margin: 40px auto;
-    padding: 20px 0;
+    padding: 94px 8%;
 }
 
 .section-title {
@@ -703,7 +707,7 @@ a {
 }
 
 .section-title h2 {
-    color: var(--navy);
+    color: var(--navy-brand);
     font-size: clamp(1.35rem, 1.15rem + 0.9vw, 28px);
     margin-bottom: 10px;
 }
@@ -767,11 +771,14 @@ a {
 
 /* ================= CASE STUDIES (Optimized & Responsive) ================= */
 .case-study {
-    width: 90%;
+    width: 100%;
     margin: 60px auto;
+    background-color: var(--purple-mid);
+    
 }
 
 .case-study-grid {
+    padding: 70px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
     gap: 40px;
@@ -972,10 +979,10 @@ a {
 }
 
 .abp-subtitle {
-    max-width: 700px;
+    
     margin: 0 auto;
     color: rgba(255,255,255,.75);
-    font-size: clamp(1rem, .95rem + .25vw, 1.15rem);
+    font-size: 18px;
     line-height: 1.7;
 }
 
@@ -1013,7 +1020,7 @@ a {
 }
 
 .abp-indication p {
-    font-size: clamp(.95rem, .9rem + .15vw, 1.05rem);
+    font-size: 18px;
     line-height: 1.7;
     color: rgba(255,255,255,.78);
 }
@@ -1178,32 +1185,28 @@ a {
     max-width: 1500px;
     margin: 0 auto;              /* Centers the white box */
     background: #fff;
-    padding: 4rem 2rem;
+    padding: 94px 8%;
     border-radius: 20px;
     text-align: left;            /* Keeps content left-aligned */
 }
 
-.key-features h1 {
-    margin-bottom: 2rem;
-    text-align: left;
-    color:var(--purple-brand);
-    text-indent: 20px;
-    font-size: clamp(1.4rem, 1.1rem + 1.6vw, 2.75rem);
-}
+
 
 .key-features__list {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left:100px
+    margin-left:100px;
+    margin-top: 0px;
 }
 
 .key-features__list li {
+    font-family: 'Montserrat', sans-serif;
     position: relative;
     padding-left: 1.8rem;
     margin-bottom: 1rem;
     line-height: 1.6;
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    font-size: 18px;
 }
 
 .key-features__list li::before {
@@ -1255,10 +1258,7 @@ a {
         padding: 3rem 2rem;
     }
 
-    .key-features h1 {
-        text-indent: 0;
-        font-size: 2rem;
-    }
+    
 
     .key-features__list {
         margin-left: 40px;
@@ -1276,10 +1276,7 @@ a {
         padding: 3rem 2rem;
     }
 
-    .key-features h1 {
-        text-indent: 0;
-        font-size: 1.8rem;
-    }
+   
 
     .key-features__list {
         margin-left: 20px;
@@ -1303,12 +1300,7 @@ a {
         border-radius: 16px;
     }
 
-    .key-features h1 {
-        text-indent: 0;
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
-    }
-
+   
     .key-features__list {
         margin-left: 0;
     }
@@ -1331,11 +1323,7 @@ a {
         border-radius: 14px;
     }
 
-    .key-features h1 {
-        text-indent: 0;
-        font-size: 1.4rem;
-        margin-bottom: 1.25rem;
-    }
+   
 
     .key-features__list {
         margin-left: 0;
@@ -1555,4 +1543,310 @@ a {
     }
 }
 
-    
+  .section-h1{
+    font-family: "Jost", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--navy-brand);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    }   
+
+    /* ===============================
+   GLOBAL RESPONSIVE TYPOGRAPHY
+   Font sizes only
+================================= */
+
+/* Default - Desktop (1440px) */
+h1,
+.section-h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* ===============================
+   4K (2560px+)
+================================= */
+@media (min-width: 2560px) {
+
+    h1,
+    .section-h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 56px;
+    }
+
+    h3 {
+        font-size: 42px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
+
+    h6 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+/* ===============================
+   Laptop (992px - 1199px)
+================================= */
+@media (max-width:1199px) {
+
+    h1,
+    .section-h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+/* ===============================
+   Tablet (768px - 991px)
+================================= */
+@media (max-width:991px) {
+
+    h1,
+    .section-h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* ===============================
+   Mobile (up to 767px)
+================================= */
+@media (max-width:767px) {
+
+    h1,
+    .section-h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* ===============================
+   4K Screens (2560px+)
+================================= */
+@media (min-width: 2560px) {
+
+    .case-study {
+        margin: 80px auto;
+    }
+
+    .case-study-grid {
+        max-width: 2200px;
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+    .case-study h2.mv-case {
+        font-size: 24px;
+    }
+}
+
+/* ===============================
+   Desktop (1200px - 1439px)
+================================= */
+@media (max-width: 1439px) {
+
+    .case-study-grid {
+        gap: 35px;
+    }
+}
+
+/* ===============================
+   Laptop (992px - 1199px)
+================================= */
+@media (max-width: 1199px) {
+
+    .case-study {
+        margin: 50px auto;
+    }
+
+    .case-study-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .case-study h2.mv-case {
+        font-size: 18px;
+    }
+}
+
+/* ===============================
+   Tablet (768px - 991px)
+================================= */
+@media (max-width: 991px) {
+
+    .case-study {
+        margin: 40px auto;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .case-study h2.mv-case {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .video-container {
+        border-width: 3px;
+    }
+}
+
+/* ===============================
+   Mobile (576px - 767px)
+================================= */
+@media (max-width: 767px) {
+
+    .case-study {
+        margin: 30px auto;
+    }
+
+    .case-study-grid {
+        
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .case-study h2.mv-case {
+        font-size: 17px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .video-container {
+        border-width: 2px;
+        border-radius: 12px;
+    }
+}
+
+/* ===============================
+   Small Mobile (Below 576px)
+================================= */
+@media (max-width: 575px) {
+
+    .case-study {
+        margin: 25px auto;
+        width: 100%;
+    }
+
+    .case-study-grid {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .case-study h2.mv-case {
+        font-size: 16px;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%; /* 16:9 ratio for mobile */
+    }
+}
