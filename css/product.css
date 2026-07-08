@@ -708,7 +708,7 @@ a {
 
 .section-title h2 {
     color: var(--navy-brand);
-    font-size: clamp(1.35rem, 1.15rem + 0.9vw, 28px);
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
@@ -770,48 +770,63 @@ a {
 }
 
 /* ================= CASE STUDIES (Optimized & Responsive) ================= */
+/* =====================================
+   CASE STUDY SECTION
+===================================== */
+
 .case-study {
     width: 100%;
-    margin: 60px auto;
-    background-color: var(--purple-mid);
-    
+    background: var(--purple-mid);
+    padding: 90px 0;
 }
 
 .case-study-grid {
-    padding: 70px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px;
 }
 
 .case_video {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .case-study h2.mv-case {
-    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 20px);
-    color: var(--navy);
-    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--navy-brand);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 18px;
     text-align: left;
-    line-height: 1.3;
+    min-height: 56px;
 }
 
-/* Aspect-ratio responsive container wrapper for Google Drive IFrames */
+/* Video Card */
+
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 75%; /* Gives a clean 4:3 Aspect Ratio matching your 640x480 */
-    height: 0;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    border: 4px solid var(--blue);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    border-radius: 18px;
+    border: 3px solid var(--white);
+    background: #000;
+    box-shadow: var(--shadow-md);
+    transition: .35s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
 }
 
 .video-container iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     border: 0;
@@ -906,48 +921,83 @@ a {
 
 /* ================= CTA ================= */
 
+/* ==========================================
+   CTA SECTION
+========================================== */
+
 .cta {
-    background: var(--text-mid);
-    text-align: center;
-    color: var(--white);
     position: relative;
     overflow: hidden;
+    background: var(--text-mid);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
 }
 
 .cta::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 500px;
     height: 500px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 50%;
     top: -180px;
     left: -180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+}
+
+.cta::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -120px;
+    bottom: -120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.04);
+}
+
+.cta .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .cta h2 {
-    font-size: clamp(1.75rem, 1.4rem + 1.8vw, 45px);
+    font-family: "Jost", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
     margin-bottom: 25px;
-    font-weight: 800;
+    color: var(--white);
 }
 
 .cta p {
     max-width: 850px;
-    margin: auto;
-    margin-bottom: 35px;
-    font-size: clamp(1rem, 0.95rem + 0.3vw, 19px);
-    color: rgba(255, 255, 255, 0.82);
+    margin: 0 auto 35px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.85);
 }
 
 .cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 50px;
     background: var(--purple-brand);
-    color: var(--off-white);
+    color: var(--white);
     border: 2px solid var(--white);
+    font-weight: 600;
+    transition: .35s ease;
 }
+
 .cta .btn:hover {
     background: var(--white);
     color: var(--purple-brand);
-    border: 0.5px solid var(--purple-brand);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 /* ==================================================
    CLINICAL INDICATIONS
@@ -1727,126 +1777,283 @@ p {
     }
 }
 
+/* =====================================
+   4K
+===================================== */
+
+@media (min-width:2560px){
+
+    .case-study-grid{
+        max-width:2200px;
+        gap:60px;
+    }
+
+    .case-study h2.mv-case{
+        font-size:24px;
+    }
+
+}
+
+/* =====================================
+   Large Desktop
+===================================== */
+
+@media (min-width:1440px) and (max-width:1919px){
+
+    .case-study-grid{
+        max-width:1500px;
+    }
+
+}
+
+/* =====================================
+   Desktop
+===================================== */
+
+@media (min-width:1200px) and (max-width:1439px){
+
+    .case-study-grid{
+        max-width:1200px;
+        gap:35px;
+    }
+
+}
+
+/* =====================================
+   Laptop
+===================================== */
+
+@media (min-width:992px) and (max-width:1199px){
+
+    .case-study{
+        padding:80px 0;
+    }
+
+    .case-study-grid{
+        padding:0 25px;
+        gap:30px;
+    }
+
+    .case-study h2.mv-case{
+        font-size:18px;
+        min-height:auto;
+    }
+
+}
+
+/* =====================================
+   Tablet
+===================================== */
+
+@media (min-width:768px) and (max-width:991px){
+
+    .case-study{
+        padding:70px 0;
+    }
+
+    .case-study-grid{
+        grid-template-columns:1fr;
+        padding:0 25px;
+        gap:35px;
+    }
+
+    .case-study h2.mv-case{
+        font-size:18px;
+        min-height:auto;
+    }
+
+}
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media (max-width:767px){
+
+    .case-study{
+        padding:60px 0;
+    }
+
+    .case-study-grid{
+        grid-template-columns:1fr;
+        padding:0 20px;
+        gap:30px;
+    }
+
+    .case-study h2.mv-case{
+        font-size:17px;
+        line-height:1.5;
+        margin-bottom:14px;
+        min-height:auto;
+    }
+
+    .video-container{
+        border-radius:14px;
+    }
+
+}
+
+/* =====================================
+   Small Mobile
+===================================== */
+
+@media (max-width:480px){
+
+    .case-study-grid{
+        padding:0 15px;
+        gap:24px;
+    }
+
+    .case-study h2.mv-case{
+        font-size:16px;
+    }
+
+}
+
 /* ===============================
-   4K Screens (2560px+)
+   4K (2560px+)
 ================================= */
-@media (min-width: 2560px) {
+@media (min-width:2560px){
 
-    .case-study {
-        margin: 80px auto;
+    .cta{
+        padding:140px 0;
     }
 
-    .case-study-grid {
-        max-width: 2200px;
-        margin: 0 auto;
-        gap: 50px;
+    .cta .container{
+        max-width:1500px;
     }
 
-    .case-study h2.mv-case {
-        font-size: 24px;
+    .cta h2{
+        font-size:56px;
+    }
+
+    .cta p{
+        font-size:20px;
+        max-width:1000px;
+    }
+
+    .cta .btn{
+        padding:18px 42px;
+        font-size:20px;
     }
 }
 
 /* ===============================
-   Desktop (1200px - 1439px)
+   Desktop (1200px-1439px)
 ================================= */
-@media (max-width: 1439px) {
+@media (max-width:1439px){
 
-    .case-study-grid {
-        gap: 35px;
+    .cta h2{
+        font-size:48px;
     }
+
 }
 
 /* ===============================
-   Laptop (992px - 1199px)
+   Laptop (992px-1199px)
 ================================= */
-@media (max-width: 1199px) {
+@media (max-width:1199px){
 
-    .case-study {
-        margin: 50px auto;
+    .cta{
+        padding:90px 0;
     }
 
-    .case-study-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+    .cta h2{
+        font-size:44px;
     }
 
-    .case-study h2.mv-case {
-        font-size: 18px;
+    .cta p{
+        font-size:17px;
+        max-width:760px;
     }
+
 }
 
 /* ===============================
-   Tablet (768px - 991px)
+   Tablet (768px-991px)
 ================================= */
-@media (max-width: 991px) {
+@media (max-width:991px){
 
-    .case-study {
-        margin: 40px auto;
+    .cta{
+        padding:80px 0;
     }
 
-    .case-study-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .cta h2{
+        font-size:38px;
     }
 
-    .case-study h2.mv-case {
-        font-size: 18px;
-        margin-bottom: 12px;
+    .cta p{
+        font-size:16px;
+        max-width:650px;
     }
 
-    .video-container {
-        border-width: 3px;
+    .cta .btn{
+        padding:15px 32px;
     }
+
 }
 
 /* ===============================
-   Mobile (576px - 767px)
+   Mobile (576px-767px)
 ================================= */
-@media (max-width: 767px) {
+@media (max-width:767px){
 
-    .case-study {
-        margin: 30px auto;
+    .cta{
+        padding:70px 0;
     }
 
-    .case-study-grid {
-        
-        grid-template-columns: 1fr;
-        gap: 24px;
+    .cta::before{
+        width:280px;
+        height:280px;
+        top:-100px;
+        left:-100px;
     }
 
-    .case-study h2.mv-case {
-        font-size: 17px;
-        line-height: 1.4;
-        margin-bottom: 10px;
+    .cta::after{
+        width:220px;
+        height:220px;
+        right:-80px;
+        bottom:-80px;
     }
 
-    .video-container {
-        border-width: 2px;
-        border-radius: 12px;
+    .cta h2{
+        font-size:30px;
     }
+
+    .cta p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .cta .btn{
+        width:100%;
+        max-width:260px;
+        padding:14px 24px;
+    }
+
 }
 
 /* ===============================
-   Small Mobile (Below 576px)
+   Small Mobile
 ================================= */
-@media (max-width: 575px) {
+@media (max-width:480px){
 
-    .case-study {
-        margin: 25px auto;
-        width: 100%;
+    .cta{
+        padding:60px 0;
     }
 
-    .case-study-grid {
-        padding: 20px;
-        gap: 20px;
+    .cta h2{
+        font-size:28px;
     }
 
-    .case-study h2.mv-case {
-        font-size: 16px;
+    .cta p{
+        font-size:15px;
     }
 
-    .video-container {
-        padding-bottom: 56.25%; /* 16:9 ratio for mobile */
+    .cta .btn{
+        max-width:230px;
+        font-size:15px;
     }
+
 }
