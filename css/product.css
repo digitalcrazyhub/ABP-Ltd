@@ -17,7 +17,7 @@
         --off-white: #FDF9FF;        /* Extremely light purple-tinted background from image */
 
         /* Text Colors */
-        --text-dark: #182230;        /* Main high-contrast bold headline text */
+        --text-dark: #000000;        /* Main high-contrast bold headline text */
         --text-mid: #434B57;         /* Readable description/body text */
         --text-light: #807D8C;       /* Muted text and captions */
 
@@ -99,6 +99,7 @@ a {
     font-weight: 800;
     font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem);
     margin-bottom: 20px;
+    font-family: 'Jost', sans-serif;
 }
 
 .section-title p {
@@ -130,34 +131,7 @@ a {
     box-shadow: var(--shadow-md);
 }
 
-.heros-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
 
-}
-
-.heros-stat {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--text-mid);
-    border-radius: 12px;
-    padding: 20px 16px;
-    text-align: center;
-}
-
-.heros-stat-num {
-    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 36px);
-    font-weight: 700;
-    color: var(--white);
-    display: block;
-}
-
-.heros-stat-label {
-    font-size: clamp(0.65rem, 0.6rem + 0.15vw, 12px);
-    color: var(--white);
-    letter-spacing: 0.06em;
-    margin-top: 4px;
-}
 
 /* ================= heros ================= */
 
@@ -190,7 +164,7 @@ a {
 }
 
 /* CONTENT */
-.containers.heros-grid {
+.containers_heros-grid {
     position: relative;
     z-index: 3;
     width: 100%;
@@ -349,7 +323,7 @@ a {
     color: var(--white);
 }
 
-.dual-section .section-titles {
+.dual-section  {
     color: var(--white);
     font-size: clamp(1.75rem, 1.4rem + 1.8vw, 42px);
     line-height: 1.2;
@@ -362,6 +336,7 @@ a {
     color: var(--white);
     line-height: 1.4;
     font-size: clamp(0.9rem, 0.8rem + 0.4vw, 18px);
+    text-align: center;
 }
 
 .dual-section .section-eyebrow {
@@ -409,12 +384,12 @@ a {
 
 .bio-compat .dual-card-tag {
     background: rgba(0, 180, 216, 0.2);
-    color: var(--accent);
+    color: var(--white);
 }
 
 .bio-active .dual-card-tag {
     background: rgba(72, 202, 228, 0.15);
-    color: var(--accent2);
+    color: var(--white);
 }
 
 .dual-card-title {
@@ -478,7 +453,7 @@ a {
     margin-bottom: 10px;
 }
 
-.science-sections .section-titles {
+.science-sections {
     color: var(--navy-brand);
     font-family: "Jost", sans-serif;
     font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
@@ -491,6 +466,7 @@ a {
     font-size: clamp(0.9rem, 0.8rem + 0.4vw, 18px);
     line-height: 1.7;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 /* Always stack table first and content below */
@@ -806,50 +782,9 @@ a {
     height: 100%;
     border: 0;
 }
-/* ================= FEATURES ================= */
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-md);
-}
 
-.feature-card h4 {
-    font-size: clamp(1.15rem, 1rem + 0.7vw, 25px);
-    color: var(--navy);
-    margin-bottom: 16px;
-}
 
-.feature-card p {
-    color: var(--text-dark);
-}
-
-/* ================= LIST SECTION ================= */
-
-.list-image img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 28px;
-    box-shadow: var(--shadow-md);
-    margin: 0 auto;
-}
-
-.custom-list li {
-    position: relative;
-    padding-left: 38px;
-    margin-bottom: 20px;
-    color: var(--text-dark);
-    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 18px);
-}
-
-.custom-list li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--cyan);
-    font-size: 22px;
-    font-weight: 700;
-}
 
 /* ================= APPLICATIONS ================= */
 
@@ -870,15 +805,9 @@ a {
     object-fit: fill;
 }
 
-.app-content h3 {
-    font-size: clamp(1.35rem, 1.15rem + 0.9vw, 28px);
-    color: var(--navy);
-    margin-bottom: 14px;
-}
 
-.app-content p {
-    color: var(--text-dark);
-}
+
+
 
 /* ================= CTA ================= */
 
@@ -920,7 +849,7 @@ a {
 .cta .container {
     position: relative;
     z-index: 2;
-    max-width: 1100px;
+    
     margin: 0 auto;
 }
 
@@ -928,11 +857,12 @@ a {
    breakpoint overrides that used to trail this rule into one fluid value. */
 .cta h2 {
     font-family: "Jost", sans-serif;
-    font-size: clamp(1.75rem, 1.3rem + 2.2vw, 56px);
+    font-size: clamp(1.75rem, 1.3rem + 2.2vw, 48px);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 25px;
     color: var(--white);
+    
 }
 
 /* FIX: fixed 18px -> clamp. */
@@ -995,7 +925,7 @@ a {
 /* FIX: fixed 18px -> clamp. Also gave it a max-width since it had
    `margin: 0 auto` with nothing to constrain against. */
 .abp-subtitle {
-    max-width: 750px;
+    
     margin: 0 auto;
     color: rgba(255,255,255,.75);
     font-size: clamp(0.9rem, 0.8rem + 0.4vw, 18px);
@@ -1387,8 +1317,7 @@ a {
 
 /* Extra Small Devices */
 @media (max-width: 374px) {
-    .container,
-    .containers {
+    .container{
         padding: 0 14px;
     }
 }
@@ -1400,16 +1329,14 @@ a {
         padding: 60px 0;
     }
 
-    .container,
-    .containers {
+    .container{
         padding: 0 18px;
     }
 
     /* Stack all multi-column layouts */
     .sc-about-grid,
     .sc-vision-grid,
-    .dual-grid,
-    .list-grid {
+    .dual-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -1454,9 +1381,7 @@ a {
         margin: 32px auto;
     }
 
-    .list-image img {
-        max-width: 260px;
-    }
+    
 
     .abp-indications {
         padding: 50px 20px;
@@ -1479,8 +1404,8 @@ a {
 
     .sc-about-grid,
     .sc-vision-grid,
-    .dual-grid,
-    .list-grid {
+    .dual-grid
+    {
         grid-template-columns: 1fr;
         gap: 36px;
     }
@@ -1489,9 +1414,7 @@ a {
         text-align: left;
     }
 
-    .list-image img {
-        max-width: 320px;
-    }
+    
 }
 
 /* Tablet */
@@ -1501,8 +1424,8 @@ a {
         padding: 85px 0;
     }
 
-    .sc-about-grid,
-    .list-grid {
+    .sc-about-grid
+    {
         grid-template-columns: 1fr;
         gap: 50px;
     }
@@ -1516,9 +1439,7 @@ a {
         gap: 28px;
     }
 
-    .list-image img {
-        max-width: 340px;
-    }
+    
 }
 
 /* Small Laptop / Desktop / Large Desktop: default multi-column layouts already apply */
@@ -1526,8 +1447,7 @@ a {
 /* 4K and up */
 @media (min-width: 3840px) {
 
-    .container,
-    .containers {
+    .container {
         max-width: 2600px;
     }
 

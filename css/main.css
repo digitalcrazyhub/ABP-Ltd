@@ -110,12 +110,6 @@
    line-height: 1.2;
  }
 
- .section-h2 {
-   font-family: "Jost", sans-serif;
-   font-weight: 700;
-   color: var(--navy-brand);
-   font-size: 24px;
- }
 
  .section-tag {
    font-size: 16px;
@@ -634,12 +628,13 @@
  }
 
  .faq-item.active .faq-arrow {
-   background: var(--purple-mid);
+   background: var(--cyan);
  }
 
  .faq-item.active .faq-arrow svg {
-   fill: #000;
+   fill: var(--white);
    transform: rotate(180deg);
+  
  }
 
  .faq-a {
@@ -683,17 +678,14 @@
    transition-delay: .3s;
  }
 
- .reveal,
- .reveal-left,
- .reveal-right {
+ .reveal{
    will-change: transform, opacity;
  }
 
  @media (prefers-reduced-motion: reduce) {
 
-   .reveal,
-   .reveal-left,
-   .reveal-right {
+   .reveal
+    {
      transition: none !important;
      opacity: 1 !important;
      transform: none !important;
@@ -729,9 +721,6 @@
      font-size: 22px;
    }
 
-   .section-h2 {
-     font-size: 28px;
-   }
 
    .section-tag {
      font-size: 18px;
@@ -792,7 +781,7 @@
 
    .testimonial-text,
    .faq-a p {
-     text-align: justify;
+     text-align: left;
    }
 
    .testimonial-grid {
@@ -812,9 +801,6 @@
      font-size: 26px;
    }
 
-   .section-h2 {
-     font-size: 34px;
-   }
 
    .section-tag {
      font-size: 20px;
@@ -925,9 +911,6 @@
      font-size: 30px;
    }
 
-   .section-h2 {
-     font-size: 40px;
-   }
 
    .section-tag {
      font-size: 22px;
@@ -987,22 +970,19 @@
      font-size: 32px;
    }
 
-   .section-h2 {
-     font-size: 44px;
-   }
 
    .section-tag {
      font-size: 24px;
    }
 
-   .hero-sub,
-   .about-content p,
-   .tags .tag-sub,
-   .section-title p,
-   .faq-content-text,
-   .faq-a p {
+  .hero-sub p{
+text-align: justify;
+  }
+   
+  
+   .section-title p {
      font-size: 18px;
-     text-align: justify;
+     text-align: center;
    }
 
    .tags .tag-heading {
@@ -1038,9 +1018,6 @@
      font-size: 35px;
    }
 
-   .section-h2 {
-     font-size: 48px;
-   }
 
    .stat-num {
      font-size: 64px;

@@ -500,28 +500,7 @@ img {
   background: #fff;
 }
 
-.gastro-app-header {
-  max-width: 1950px;
-  margin: 0 auto 50px;
-  text-align: center;
-}
 
-.gastro-app-title {
-  font-size: clamp(1.6rem, 3vw, 3rem);
-  font-weight: 700;
-  color: #000;
-  font-family: 'Jost', sans-serif;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.gastro-app-description {
-  max-width: 950px;
-  margin: auto;
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
-  line-height: 1.8;
-  color: #000;
-}
 
 .gastro-app-wrapper {
   max-width: 1950px;
@@ -1054,7 +1033,6 @@ section.hernia-repair::before {
   .types-block,
   .proc-body,
   .prolapse-grid,
-  .timeline-row,
   .sg-case-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -1092,7 +1070,7 @@ section.hernia-repair::before {
 
   .prolapse-card img,
   .sg-case-image,
-  .day-item img {
+   img {
     height: auto;
   }
 
@@ -1114,7 +1092,6 @@ section.hernia-repair::before {
   }
 
   .prolapse-grid,
-  .timeline-row,
   .sg-case-grid {
     grid-template-columns: 1fr;
   }
@@ -1149,8 +1126,7 @@ section.hernia-repair::before {
     grid-template-columns: 1fr;
   }
 
-  .prolapse-grid,
-  .timeline-row,
+  .prolapse-grid
   .sg-case-grid {
     grid-template-columns: repeat(2, 1fr);
   }
