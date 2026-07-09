@@ -365,7 +365,7 @@ img {
 ============================== */
 
 .sg-case-section {
-  max-width: 1950px;
+ 
   margin: 0 auto;
   padding: 0 5%;
 }
@@ -1023,11 +1023,6 @@ section.hernia-repair::before {
   color: var(--text-mid);
 }
 
-#handsurgery {
-  max-width: 1950px;
- 
- 
-}
 
 /* ==========================================================
    RESPONSIVE SYSTEM

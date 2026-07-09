@@ -52,7 +52,6 @@ body{
 =========================*/
 .wrap{
     width:100%;
-    max-width:1200px;
     margin:100px auto;
     padding:40px 25px;
 }
