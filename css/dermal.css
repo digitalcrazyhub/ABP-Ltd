@@ -108,7 +108,7 @@ a {
     margin-top: .6rem;
     font-size: clamp(1rem, .25vw + .92rem, 1.15rem);
     color: var(--text-dark);
-    max-width: 680px;
+    
     line-height: 1.7;
     text-align: left;
 }
