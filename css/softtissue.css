@@ -1,7 +1,6 @@
-/** Montserrat Font **/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/**Jost Font **/
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+/** Poppins Font **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --purple-brand: #6B2D5C;
   --navy-brand: #131E51;
@@ -44,12 +43,209 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: var(--off-white);
   color: var(--text-dark);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* ─── BASE TYPOGRAPHY (Poppins) ───────────────────────── */
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 56px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+/* ─── TYPOGRAPHY RESPONSIVE (Media Queries, no clamp) ───
+   Breakpoints match the layout breakpoints already used
+   in this stylesheet.
+------------------------------------------------------- */
+
+/* Extra Small Mobile: 320px - 479px */
+@media (max-width: 479px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Large Mobile: 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+/* Tablet Portrait: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Tablet Landscape / Small Laptop: 992px - 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Desktop: 1200px - 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 31px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+}
+
+/* Large Desktop: 1440px - 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* Full HD: 1920px - 2559px */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 46px;
+  }
+
+  h3 {
+    font-size: 37px;
+  }
+
+  p {
+    font-size: 19px;
+  }
+}
+
+/* 2K / QHD: 2560px - 3839px */
+@media (min-width: 2560px) and (max-width: 3839px) {
+  h1 {
+    font-size: 68px;
+  }
+
+  h2 {
+    font-size: 52px;
+  }
+
+  h3 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 21px;
+  }
+}
+
+/* 4K & Above: 3840px+ */
+@media (min-width: 3840px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 24px;
+  }
 }
 
 /* global safety net so no image can ever overflow its container on any device */
@@ -96,14 +292,68 @@ img {
 .abp-banner__title {
   position: relative;
   z-index: 2;
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: clamp(2.2rem, 7vw, 5rem);
+  font-size: 56px;
   color: #fff;
   text-align: center;
   line-height: 1.15;
   padding: 0 20px;
   animation: abpFadeUp 1.2s ease both;
+}
+
+@media (max-width: 479px) {
+  .abp-banner__title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-banner__title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-banner__title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .abp-banner__title {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .abp-banner__title {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .abp-banner__title {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .abp-banner__title {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+  .abp-banner__title {
+    font-size: 68px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .abp-banner__title {
+    font-size: 80px;
+  }
 }
 
 @keyframes abpZoom {
@@ -138,7 +388,7 @@ img {
   display: inline-block;
   background: var(--purple-brand);
   color: #fff;
-  font-size: clamp(.72rem, .5vw + .6rem, 1.85rem);
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -146,12 +396,48 @@ img {
   border-radius: 50px;
 }
 
+@media (max-width: 479px) {
+  .abp-badge {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-badge {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-badge {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .abp-badge {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .abp-badge {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .abp-badge {
+    font-size: 18px;
+  }
+}
+
 
 
 .abp-section-title {
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: clamp(1.6rem, 1.4vw + 1.2rem, 2.8rem);
+  font-size: 42px;
   color: var(--navy-brand);
   line-height: 1.15;
 }
@@ -162,10 +448,46 @@ img {
 
 .abp-subtitle {
   margin-top: .6rem;
-  font-size: clamp(1rem, .25vw + .92rem, 1.15rem);
+  font-size: 18px;
   color: var(--text-dark);
   max-width: 680px;
   line-height: 1.7;
+}
+
+@media (max-width: 479px) {
+  .abp-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .abp-subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .abp-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .abp-subtitle {
+    font-size: 21px;
+  }
 }
 
 .abp-center {
@@ -180,7 +502,7 @@ img {
 .abp-hero {
   margin-top: 70px;
   background: var(--lavender-light);
-  padding: clamp(100px, 6vw, 100px) 0;
+  padding: 30px 0;
 }
 
 .abp-hero__grid {
@@ -205,26 +527,169 @@ img {
 }
 
 .abp-hero__heading {
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 2.4vw + 1.2rem, 3.6rem);
+  font-size: 56px;
   color: var(--navy-brand);
   line-height: 1.1;
 }
 
+@media (max-width: 479px) {
+  .abp-hero__heading {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-hero__heading {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-hero__heading {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .abp-hero__heading {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .abp-hero__heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .abp-hero__heading {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .abp-hero__heading {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+  .abp-hero__heading {
+    font-size: 68px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .abp-hero__heading {
+    font-size: 80px;
+  }
+}
+
 .abp-hero__sub {
-  font-size: clamp(1.05rem, .3vw + .95rem, 1.25rem);
+  font-size: 20px;
   font-weight: 600;
   color: var(--purple-brand);
   margin-top: 6px;
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .abp-hero__sub {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-hero__sub {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-hero__sub {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .abp-hero__sub {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .abp-hero__sub {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .abp-hero__sub {
+    font-size: 24px;
+  }
 }
 
 .abp-hero__lead {
   margin-top: 18px;
-  font-size: 1.1rem;
+  font-size: 18px;
   line-height: 1.85;
   color: var(--text-dark);
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .abp-hero__lead {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-hero__lead {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-hero__lead {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .abp-hero__lead {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .abp-hero__lead {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .abp-hero__lead {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+  .abp-hero__lead {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .abp-hero__lead {
+    font-size: 2.5rem;
+  }
 }
 
 .abp-hero__cta {
@@ -235,10 +700,39 @@ img {
   border: 1.5px solid var(--purple-brand);
   color: var(--purple-brand);
   font-weight: 600;
-  font-size: clamp(.9rem, .15vw + .85rem, 1rem);
+  font-size: 15px;
   padding: 13px 26px;
   border-radius: 50px;
   transition: all .35s ease;
+}
+
+@media (max-width: 479px) {
+  .abp-hero__cta {
+    font-size: 13px;
+    align-items: center;
+ text-align: center;
+ align-content: center;
+ align-self: center;
+ justify-content: center;
+    
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .abp-hero__cta {
+    font-size: 14px;   
+ align-items: center;
+ text-align: center;
+ align-content: center;
+ align-self: center;
+ justify-content: center;
+}
+  }
+
+@media (min-width: 992px) {
+  .abp-hero__cta {
+    font-size: 15px;
+  }
 }
 
 .abp-hero__cta:hover {
@@ -257,31 +751,161 @@ img {
 
 .abp-hero__image img {
   width: 100%;
-  max-width: clamp(280px, 32vw, 560px);
+  max-width: 560px;
   animation: abpFloat 6s ease-in-out infinite;
   filter: drop-shadow(0 20px 40px rgba(107, 45, 92, .15));
+}
+
+@media (max-width: 479px) {
+  .abp-hero__image img {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .abp-hero__image img {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .abp-hero__image img {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .abp-hero__image img {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .abp-hero__image img {
+    max-width: 560px;
+  }
 }
 
 
 
 .section-title {
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: 42px;
   font-weight: 800;
   color: var(--navy-brand);
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .section-title {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .section-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 42px;
+  }
 }
 
 .section-desc {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #000;
   padding-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .section-desc {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .section-desc {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-desc {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .section-desc {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-desc {
+    font-size: 18px;
+  }
 }
 
 .hand-surgery-content {
-  font-size:  1.1rem;
+  font-size: 18px;
   margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .hand-surgery-content {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .hand-surgery-content {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hand-surgery-content {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .hand-surgery-content {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hand-surgery-content {
+    font-size: 18px;
+  }
 }
 
 .section {
@@ -333,18 +957,81 @@ img {
 }
 
 .prolapse-card h3 {
-  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  font-size: 34px;
   font-weight: 700;
   color: var(--purple-brand);
   margin-bottom: 12px;
   line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .prolapse-card h3 {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .prolapse-card h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .prolapse-card h3 {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .prolapse-card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .prolapse-card h3 {
+    font-size: 22px;
+  }
 }
 
 .prolapse-card p {
-  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+  font-size: 18px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 14px;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .prolapse-card p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .prolapse-card p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .prolapse-card p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .prolapse-card p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .prolapse-card p {
+    font-size: 18px;
+  }
 }
 
 .prolapse-card ul {
@@ -365,7 +1052,7 @@ img {
 ============================== */
 
 .sg-case-section {
- 
+
   margin: 0 auto;
   padding: 0 5%;
 }
@@ -376,15 +1063,46 @@ img {
 }
 
 .sg-section-title h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: 42px;
   font-weight: 700;
   color: var(--navy-brand);
   line-height: 1.3;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .sg-section-title h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .sg-section-title h2 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sg-section-title h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sg-section-title h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sg-section-title h2 {
+    font-size: 32px;
+  }
 }
 
 /* GRID */
 .sg-case-grid {
-  font-family: "Jost" sans-serif;
+  font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
@@ -419,22 +1137,44 @@ img {
 }
 
 .sg-case-content h3 {
-  font-size: clamp(0.85rem, 1.4vw, 16px);
+  font-size: 16px;
   color: var(--navy-brand);
   text-align: center;
   line-height: 1.5;
   font-weight: 700;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
+
+@media (max-width: 479px) {
+  .sg-case-content h3 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .sg-case-content h3 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sg-case-content h3 {
+    font-size: 16px;
+  }
+}
+
 .sg-case-image {
   width: 100%;
-  aspect-ratio: 4 / 3;       /* same shape on every card, scales with width */
+  aspect-ratio: 4 / 3;
+  /* same shape on every card, scales with width */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-radius: 10px;
-  background: var(--lavender, #f4f2f8); /* shows while loading / letterboxing */
+  background: var(--lavender, #f4f2f8);
+  /* shows while loading / letterboxing */
 }
 
 .sg-case-image img {
@@ -445,6 +1185,7 @@ img {
   border-radius: 10px;
   display: block;
 }
+
 /* ── SIZES ── */
 .sizes-section {
   background: var(--gradient-bar);
@@ -454,9 +1195,28 @@ img {
 
 .sizes-section h2 {
   color: #fff;
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  font-size: 22px;
   font-weight: 800;
   margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .sizes-section h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .sizes-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sizes-section h2 {
+    font-size: 22px;
+  }
 }
 
 .sizes-section p {
@@ -515,17 +1275,80 @@ img {
 }
 
 .gastro-app-heading {
-  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-size: 34px;
   color: var(--purple-brand);
   margin-bottom: 20px;
   line-height: 1.3;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .gastro-app-heading {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .gastro-app-heading {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .gastro-app-heading {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .gastro-app-heading {
+    font-size: 31px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gastro-app-heading {
+    font-size: 34px;
+  }
 }
 
 .gastro-app-text {
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-size: 18px;
   color: var(--text-mid);
   line-height: 1.9;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .gastro-app-text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .gastro-app-text {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .gastro-app-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .gastro-app-text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gastro-app-text {
+    font-size: 18px;
+  }
 }
 
 .gastro-case-card {
@@ -551,6 +1374,7 @@ img {
   color: var(--text-mid);
   line-height: 1.8;
   margin: 0;
+  text-align: justify;
 }
 
 /* ======================================================
@@ -559,7 +1383,7 @@ img {
 
 section.hernia-repair {
   position: relative;
-  padding: 96px 24px 120px;
+  padding: 47px 24px 50px;
   overflow: hidden;
   background: var(--off-white);
   max-width: 2000px;
@@ -587,22 +1411,95 @@ section.hernia-repair::before {
 /* ---------- Section header ---------- */
 
 .sec-head h2 {
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 4.2vw, 50px);
+  font-size: 42px;
   padding-bottom: 10px;
   color: var(--text-dark);
 }
 
+@media (max-width: 479px) {
+  .sec-head h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .sec-head h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-head h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .sec-head h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .sec-head h2 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .sec-head h2 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .sec-head h2 {
+    font-size: 64px;
+  }
+}
+
 .sec-head h2 span {
   color: var(--purple-brand);
-  font-family: 'Jost', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .sec-head p {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-mid);
   padding-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .sec-head p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .sec-head p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-head p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .sec-head p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sec-head p {
+    font-size: 18px;
+  }
 }
 
 /* ---------- Hero strip ---------- */
@@ -663,17 +1560,72 @@ section.hernia-repair::before {
 }
 
 .shelf-card .big {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(34px, 4vw, 46px);
+  font-family: "Poppins", sans-serif;
+  font-size: 46px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 4px;
 }
 
+@media (max-width: 479px) {
+  .shelf-card .big {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .shelf-card .big {
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .shelf-card .big {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .shelf-card .big {
+    font-size: 43px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shelf-card .big {
+    font-size: 46px;
+  }
+}
+
 .shelf-card .label {
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.82);
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .shelf-card .label {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .shelf-card .label {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .shelf-card .label {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shelf-card .label {
+    font-size: 18px;
+  }
 }
 
 .quickfacts {
@@ -695,8 +1647,39 @@ section.hernia-repair::before {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  font-size: clamp(0.92rem, 1.2vw, 1.1rem);
+  font-size: 18px;
   color: var(--text-mid);
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .quickfacts li {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .quickfacts li {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .quickfacts li {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .quickfacts li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .quickfacts li {
+    font-size: 18px;
+  }
 }
 
 .quickfacts li::before {
@@ -742,23 +1725,95 @@ section.hernia-repair::before {
 
 .types-visual .cap {
   margin-top: 14px;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: 18px;
   color: var(--text-light);
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .types-visual .cap {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .types-visual .cap {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .types-visual .cap {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .types-visual .cap {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .types-visual .cap {
+    font-size: 18px;
+  }
 }
 
 .types-text h3 {
-  font-family: "Jost", sans-serif;
-  font-size: clamp(28px, 4.2vw, 50px);
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
   color: var(--navy-brand);
   margin-bottom: 22px;
   font-weight: 700;
 }
 
+@media (max-width: 479px) {
+  .types-text h3 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .types-text h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .types-text h3 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .types-text h3 {
+    font-size: 33px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .types-text h3 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .types-text h3 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .types-text h3 {
+    font-size: 64px;
+  }
+}
+
 .type-grid {
   display: grid;
- 
+
   gap: 14px;
 }
 
@@ -777,17 +1832,72 @@ section.hernia-repair::before {
 }
 
 .type-item .name {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--purple-brand);
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-size: 18px;
   margin-bottom: 3px;
 }
 
+@media (max-width: 479px) {
+  .type-item .name {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .type-item .name {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .type-item .name {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .type-item .name {
+    font-size: 18px;
+  }
+}
+
 .type-item .desc {
-  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  font-size: 18px;
   color: var(--text-dark);
   line-height: 1.45;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .type-item .desc {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .type-item .desc {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .type-item .desc {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .type-item .desc {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .type-item .desc {
+    font-size: 18px;
+  }
 }
 
 /* ---------- Procedure pathway rail ---------- */
@@ -796,10 +1906,52 @@ section.hernia-repair::before {
 }
 
 .pathway-head h3 {
-  font-family: 'Jost', sans-serif;
-  font-size: clamp(28px, 4.2vw, 50px);
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
   color: var(--text-dark);
   font-weight: 700;
+}
+
+@media (max-width: 479px) {
+  .pathway-head h3 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .pathway-head h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pathway-head h3 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .pathway-head h3 {
+    font-size: 33px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .pathway-head h3 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .pathway-head h3 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .pathway-head h3 {
+    font-size: 64px;
+  }
 }
 
 .pathway {
@@ -844,7 +1996,7 @@ section.hernia-repair::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 25px;
   letter-spacing: 0.01em;
@@ -866,17 +2018,67 @@ section.hernia-repair::before {
 }
 
 .proc-text h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(18px, 2vw, 22px);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
   color: var(--navy-brand);
   margin-bottom: 10px;
   font-weight: 700;
 }
 
+@media (max-width: 479px) {
+  .proc-text h4 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1439px) {
+  .proc-text h4 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .proc-text h4 {
+    font-size: 22px;
+  }
+}
+
 .proc-text p {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: var(--text-mid);
   line-height: 1.65;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .proc-text p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .proc-text p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .proc-text p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .proc-text p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .proc-text p {
+    font-size: 18px;
+  }
 }
 
 .proc-text p b {
@@ -991,7 +2193,7 @@ section.hernia-repair::before {
 }
 
 .step-pair .step .num {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: var(--plum-bright);
   font-weight: 600;
@@ -999,8 +2201,40 @@ section.hernia-repair::before {
 }
 
 .step-pair .step p {
-  font-size: clamp(0.92rem, 1.2vw, 1.1rem);
+  font-size: 18px;
   color: var(--text-mid);
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+}
+
+@media (max-width: 479px) {
+  .step-pair .step p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .step-pair .step p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .step-pair .step p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .step-pair .step p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step-pair .step p {
+    font-size: 18px;
+  }
 }
 
 
@@ -1022,7 +2256,7 @@ section.hernia-repair::before {
   .sg-case-section {
     width: 95%;
     padding-left: 10px;
-    padding-right:0;
+    padding-right: 0;
   }
 
   .abp-banner {
@@ -1039,18 +2273,11 @@ section.hernia-repair::before {
     grid-template-areas:
       "content"
       "image";
-      
+
   }
-  .abp-hero__grid{
+
+  .abp-hero__grid {
     text-align: center;
-  }
-.quickfacts ul {
-   
-    font-size: 12px;
-  }
-  .abp-hero__lead {
-    font-size: 15px;
-    line-height: 1.7;
   }
 
   .proc {
@@ -1071,7 +2298,7 @@ section.hernia-repair::before {
 
   .prolapse-card img,
   .sg-case-image,
-   img {
+  img {
     height: auto;
   }
 
@@ -1096,7 +2323,31 @@ section.hernia-repair::before {
   .sg-case-grid {
     grid-template-columns: 1fr;
   }
+.sg-case-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "image";
 
+  }
+  .abp-hero__grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "image";
+      
+  }
+  .abp-hero__lead{
+    grid-area: 'content';
+    order: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .abp-hero__image {
+    grid-area:'image';
+  order: 2;
+  }
   .step-pair {
     flex-direction: column;
   }
@@ -1108,6 +2359,13 @@ section.hernia-repair::before {
   .type-grid {
     grid-template-columns: 1fr;
   }
+  .abp-hero__eyebrow{
+ align-items: center;
+ text-align: center;
+ align-content: center;
+ align-self: center;
+ justify-content: center;
+}
 }
 
 /* ---------- Tablet Portrait ----------
@@ -1127,8 +2385,7 @@ section.hernia-repair::before {
     grid-template-columns: 1fr;
   }
 
-  .prolapse-grid
-  .sg-case-grid {
+  .prolapse-grid .sg-case-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1186,11 +2443,6 @@ section.hernia-repair::before {
   .wrap {
     max-width: 1700px;
   }
-
-
-  .abp-hero__lead {
-    font-size: 1.4rem;
-  }
 }
 
 /* ---------- Full HD ----------
@@ -1204,17 +2456,6 @@ section.hernia-repair::before {
   #handsurgery,
   .sg-case-section {
     max-width: 1950px;
-  }
-
-
-  .abp-hero__lead {
-    font-size: 1.5rem;
-  }
-
-  .sec-head h2,
-  .types-text h3,
-  .pathway-head h3 {
-    font-size: 3rem;
   }
 }
 
@@ -1230,17 +2471,6 @@ section.hernia-repair::before {
 
   .abp-banner {
     min-height: 700px;
-  }
-
-
-  .abp-hero__lead {
-    font-size: 2rem;
-  }
-
-  .sec-head h2,
-  .types-text h3,
-  .pathway-head h3 {
-    font-size: 4rem;
   }
 
   .prolapse-card-content,
@@ -1264,21 +2494,6 @@ section.hernia-repair::before {
   .abp-banner {
     min-height: 900px;
   }
-
-
-  .abp-hero__lead {
-    font-size: 2.5rem;
-  }
-
-  .sec-head h2,
-  .types-text h3,
-  .pathway-head h3 {
-    font-size: 5rem;
-  }
-
-  body {
-    font-size: 22px;
-  }
 }
 
 /*=============================
@@ -1287,7 +2502,7 @@ section.hernia-repair::before {
 
 .du-header {
   width: 100%;
-  min-height: clamp(75px, 8vw, 80px);
+  min-height: 80px;
 
   display: flex;
   align-items: center;
@@ -1300,7 +2515,49 @@ section.hernia-repair::before {
 
   overflow: hidden;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .du-header {
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .du-header {
+    min-height: 70px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .du-header {
+    min-height: 80px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .du-header {
+    min-height: 90px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .du-header {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .du-header {
+    min-height: 120px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-header {
+    min-height: 150px;
+  }
 }
 
 
@@ -1310,7 +2567,7 @@ section.hernia-repair::before {
 
 .du-left {
 
-  width: clamp(110px, 15vw, 350px);
+  width: 350px;
   height: 150px;
 
   background: linear-gradient(135deg, #732566, #a12f8a);
@@ -1324,6 +2581,69 @@ section.hernia-repair::before {
   position: relative;
 }
 
+@media (max-width: 400px) {
+  .du-left {
+    width: 95px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 479px) {
+  .du-left {
+    width: 120px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .du-left {
+    width: 120px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-left {
+    width: 150px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-left {
+    width: 190px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .du-left {
+    width: 190px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .du-left {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-left {
+    width: 320px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-left {
+    width: 420px;
+    height: 150px;
+  }
+}
+
 
 .du-left::after {
 
@@ -1332,14 +2652,77 @@ section.hernia-repair::before {
   position: absolute;
 
   top: 0;
-  right: clamp(-60px, -4vw, -30px);
+  right: -30px;
 
-  width: clamp(55px, 6vw, 120px);
+  width: 120px;
   height: 100%;
 
   background: var(--purple-mid);
 
   transform: skewX(25deg);
+}
+
+@media (max-width: 400px) {
+  .du-left::after {
+    width: 35px;
+    right: -18px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 479px) {
+  .du-left::after {
+    width: 45px;
+    right: -22px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .du-left::after {
+    width: 45px;
+    right: -22px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-left::after {
+    width: 55px;
+    right: -28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-left::after {
+    width: 70px;
+    right: -35px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .du-left::after {
+    width: 70px;
+    right: -35px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .du-left::after {
+    width: 90px;
+    right: -45px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-left::after {
+    width: 110px;
+    right: -55px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-left::after {
+    width: 140px;
+    right: -70px;
+  }
 }
 
 
@@ -1349,8 +2732,8 @@ section.hernia-repair::before {
 
 .du-icon {
 
-  width: clamp(40px, 4vw, 90px);
-  height: clamp(40px, 4vw, 90px);
+  width: 90px;
+  height: 90px;
 
   border-radius: 50%;
 
@@ -1364,11 +2747,102 @@ section.hernia-repair::before {
   z-index: 2;
 }
 
+@media (max-width: 400px) {
+  .du-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 576px) {
+  .du-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .du-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-icon {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-icon {
+    width: 95px;
+    height: 95px;
+  }
+}
+
 .du-icon i {
 
   color: #922c7f;
 
-  font-size: clamp(18px, 2vw, 42px);
+  font-size: 42px;
+}
+
+@media (max-width: 400px) {
+  .du-icon i {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 576px) {
+  .du-icon i {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-icon i {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-icon i {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .du-icon i {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-icon i {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-icon i {
+    font-size: 44px;
+  }
 }
 
 
@@ -1380,11 +2854,60 @@ section.hernia-repair::before {
 
   flex: 1;
 
-  padding-left: clamp(15px, 3vw, 70px);
-  padding-right: clamp(25px, 5vw, 120px);
+  padding-left: 70px;
+  padding-right: 120px;
 
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 400px) {
+  .du-content {
+    padding-left: 12px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 576px) {
+  .du-content {
+    padding-left: 16px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-content {
+    padding-left: 22px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-content {
+    padding-left: 28px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .du-content {
+    padding-left: 40px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-content {
+    padding-left: 60px;
+    padding-right: 90px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-content {
+    padding-left: 80px;
+    padding-right: 120px;
+  }
 }
 
 .du-content h2 {
@@ -1395,9 +2918,65 @@ section.hernia-repair::before {
 
   font-weight: 700;
 
-  font-size: clamp(20px, 2.3vw, 58px);
+  font-size: 42px;
 
   line-height: 1.1;
+}
+
+@media (max-width: 400px) {
+  .du-content h2 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 479px) {
+  .du-content h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .du-content h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-content h2 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-content h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .du-content h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .du-content h2 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-content h2 {
+    font-size: 42px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-content h2 {
+    font-size: 58px;
+  }
 }
 
 .du-content p {
@@ -1408,9 +2987,64 @@ section.hernia-repair::before {
 
   font-weight: 600;
 
-  font-size: clamp(12px, 1.25vw, 30px);
+  font-size: 18px;
 
   line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 400px) {
+  .du-content p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 479px) {
+  .du-content p {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .du-content p {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-content p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-content p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .du-content p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .du-content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+  .du-content p {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-content p {
+    font-size: 28px;
+  }
 }
 
 
@@ -1425,9 +3059,9 @@ section.hernia-repair::before {
   position: absolute;
 
   top: -2px;
-  right: clamp(-45px, -2vw, -18px);
+  right: -18px;
 
-  width: clamp(35px, 4vw, 100px);
+  width: 100px;
   height: calc(100% + 4px);
 
   background: var(--purple-mid);
@@ -1441,317 +3075,52 @@ section.hernia-repair::before {
   transform: skewX(-35deg);
 }
 
-
-/* ==========================================
-   4K Displays (2560px and above)
-========================================== */
-@media (min-width: 2560px) {
-
-  .du-header {
-    min-height: 150px;
-  }
-
-  .du-left {
-    width: 420px;
-    height: 150px;
-  }
-
-  .du-left::after {
-    width: 140px;
-    right: -70px;
-  }
-
-  .du-icon {
-    width: 95px;
-    height: 95px;
-  }
-
-  .du-icon i {
-    font-size: 44px;
-  }
-
-  .du-content {
-    padding-left: 80px;
-    padding-right: 120px;
-  }
-
-  .du-content h2 {
-    font-size: 58px;
-  }
-
-  .du-content p {
-    font-size: 28px;
-  }
-
+@media (max-width: 400px) {
   .du-header::after {
-    width: 110px;
-    right: -45px;
+    width: 24px;
+    right: -12px;
   }
 }
 
-
-/* ==========================================
-   Desktop (1920px - 2559px)
-========================================== */
-@media (max-width:2559px) {
-
-  .du-header {
-    min-height: 120px;
-  }
-
-  .du-left {
-    width: 320px;
-    height: 120px;
-  }
-
-  .du-left::after {
-    width: 110px;
-    right: -55px;
-  }
-
-  .du-content h2 {
-    font-size: 42px;
-    white-space: nowrap;
-  }
-
-  .du-content p {
-    font-size: 22px;
-  }
-}
-
-
-/* ==========================================
-   Laptop (1440px)
-========================================== */
-@media (max-width:1440px) {
-
-  .du-header {
-    min-height: 100px;
-  }
-
-  .du-left {
-    width: 250px;
-    height: 100px;
-  }
-
-  .du-left::after {
-    width: 90px;
-    right: -45px;
-  }
-
-  .du-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .du-icon i {
-    font-size: 28px;
-  }
-
-  .du-content {
-    padding-left: 40px;
-    padding-right: 60px;
-  }
-
-  .du-content h2 {
-    font-size: 34px;
-  }
-
-  .du-content p {
-    font-size: 18px;
-  }
-}
-
-
-/* ==========================================
-   Small Laptop / Tablet Landscape
-========================================== */
-@media (max-width:1024px) {
-
-  .du-header {
-    min-height: 90px;
-  }
-
-  .du-left {
-    width: 190px;
-    height: 90px;
-  }
-
-  .du-left::after {
-    width: 70px;
-    right: -35px;
-  }
-
-  .du-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .du-icon i {
-    font-size: 22px;
-  }
-
-  .du-content {
-    padding-left: 28px;
-    padding-right: 40px;
-  }
-
-  .du-content h2 {
-    font-size: 28px;
-  }
-
-  .du-content p {
-    font-size: 16px;
-  }
-
-  .du-header::after {
-    width: 55px;
-    right: -24px;
-  }
-}
-
-
-/* ==========================================
-   Tablet Portrait
-========================================== */
-@media (max-width:768px) {
-
-  .du-header {
-    min-height: 80px;
-  }
-
-  .du-left {
-    width: 150px;
-    height: 80px;
-  }
-
-  .du-left::after {
-    width: 55px;
-    right: -28px;
-  }
-
-  .du-icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .du-icon i {
-    font-size: 20px;
-  }
-
-  .du-content {
-    padding-left: 22px;
-    padding-right: 30px;
-  }
-
-  .du-content h2 {
-    font-size: 24px;
-  }
-
-  .du-content p {
-    font-size: 14px;
-  }
-
-  .du-header::after {
-    width: 42px;
-    right: -18px;
-  }
-}
-
-
-/* ==========================================
-   Large Mobile
-========================================== */
-@media (max-width:576px) {
-
-  .du-header {
-    min-height: 70px;
-  }
-
-  .du-left {
-    width: 120px;
-    height: 70px;
-  }
-
-  .du-left::after {
-    width: 45px;
-    right: -22px;
-  }
-
-  .du-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .du-icon i {
-    font-size: 16px;
-  }
-
-  .du-content {
-    padding-left: 16px;
-    padding-right: 20px;
-  }
-
-  .du-content h2 {
-    font-size: 18px;
-    margin-bottom: 3px;
-  }
-
-  .du-content p {
-    font-size: 11px;
-  }
-
+@media (min-width: 401px) and (max-width: 576px) {
   .du-header::after {
     width: 30px;
     right: -14px;
   }
 }
 
-
-/* ==========================================
-   Small Mobile (320px–400px)
-========================================== */
-@media (max-width:400px) {
-
-  .du-header {
-    min-height: 60px;
+@media (min-width: 577px) and (max-width: 767px) {
+  .du-header::after {
+    width: 42px;
+    right: -18px;
   }
+}
 
-  .du-left {
-    width: 95px;
-    height: 60px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .du-header::after {
+    width: 55px;
+    right: -24px;
   }
+}
 
-  .du-left::after {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .du-header::after {
     width: 35px;
     right: -18px;
   }
+}
 
-  .du-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .du-icon i {
-    font-size: 14px;
-  }
-
-  .du-content {
-    padding-left: 12px;
-    padding-right: 16px;
-  }
-
-  .du-content h2 {
-    font-size: 16px;
-  }
-
-  .du-content p {
-    font-size: 10px;
-  }
-
+@media (min-width: 1441px) and (max-width: 2559px) {
   .du-header::after {
-    width: 24px;
-    right: -12px;
+    width: 45px;
+    right: -18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .du-header::after {
+    width: 110px;
+    right: -45px;
   }
 }
 
@@ -1760,189 +3129,226 @@ section.hernia-repair::before {
    Cards Grid
 =========================== */
 .abp-cards-grid {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 380px) {
+  .abp-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 576px) {
+  .abp-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .abp-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .abp-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .abp-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .abp-cards-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    align-items: stretch;
+    gap: 22px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1599px) {
+  .abp-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 2559px) {
+  .abp-cards-grid {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .abp-cards-grid {
+    gap: 40px;
+  }
 }
 
 /* ===========================
    Card
 =========================== */
 .abp-card {
-    background: #fff;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform .4s ease, box-shadow .4s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .4s ease, box-shadow .4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .abp-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
 
 .abp-card__img {
-    width: 100%;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+@media (max-width: 576px) {
+  .abp-card__img {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (min-width: 577px) {
+  .abp-card__img {
     aspect-ratio: 4 / 5;
-    object-fit: cover;
-    display: block;
-    transition: transform .5s ease;
+  }
 }
 
 .abp-card:hover .abp-card__img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .abp-card__body {
+  padding: 22px 20px 24px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 380px) {
+  .abp-card__body {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 576px) {
+  .abp-card__body {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .abp-card__body {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .abp-card__body {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 2559px) {
+  .abp-card__body {
     padding: 22px 20px 24px;
-    text-align: center;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  }
+}
+
+@media (min-width: 2560px) {
+  .abp-card__body {
+    padding: 32px;
+  }
 }
 
 .abp-card__title {
-    font-family: 'Jost', sans-serif;
-    font-weight: 700;
-    font-size: clamp(.95rem, .2vw + .88rem, 1.1rem);
-    color: var(--text-dark);
-    margin-bottom: 6px;
-    line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
-/* =================================
-   4K Displays (2560px+)
-================================= */
-@media (min-width:2560px){
-
-    .abp-cards-grid{
-        gap:40px;
-    }
-
-    .abp-card__body{
-        padding:32px;
-    }
-
-    .abp-card__title{
-        font-size:1.6rem;
-    }
-
-    .abp-card__img{
-        aspect-ratio:4/5;
-    }
+@media (max-width: 380px) {
+  .abp-card__title {
+    font-size: 14px;
+  }
 }
 
-/* =================================
-   2K Displays (1600px-2559px)
-================================= */
-@media (min-width:1600px) and (max-width:2559px){
-
-    .abp-cards-grid{
-        gap:30px;
-    }
-
-    .abp-card__title{
-        font-size:1.25rem;
-    }
+@media (min-width: 381px) and (max-width: 576px) {
+  .abp-card__title {
+    font-size: 15px;
+  }
 }
 
-/* =================================
-   Large Desktop
-================================= */
-@media (max-width:1400px){
-
-    .abp-cards-grid{
-        grid-template-columns:repeat(4,1fr);
-        gap:22px;
-    }
+@media (min-width: 577px) and (max-width: 768px) {
+  .abp-card__title {
+    font-size: 16px;
+  }
 }
 
-/* =================================
-   Laptop
-================================= */
-@media (max-width:1200px){
-
-    .abp-cards-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
+@media (min-width: 769px) and (max-width: 992px) {
+  .abp-card__title {
+    font-size: 16px;
+  }
 }
 
-/* =================================
-   Tablet Landscape
-================================= */
-@media (max-width:992px){
-
-    .abp-cards-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .abp-card__body{
-        padding:20px;
-    }
+@media (min-width: 993px) and (max-width: 1599px) {
+  .abp-card__title {
+    font-size: 17px;
+  }
 }
 
-/* =================================
-   Tablet Portrait
-================================= */
-@media (max-width:768px){
-
-    .abp-cards-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:18px;
-    }
-
-    .abp-card__title{
-        font-size:1rem;
-    }
+@media (min-width: 1600px) and (max-width: 2559px) {
+  .abp-card__title {
+    font-size: 18px;
+  }
 }
 
-/* =================================
-   Large Mobile
-================================= */
-@media (max-width:576px){
-
-    .abp-cards-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .abp-card__img{
-        aspect-ratio:16/10;
-    }
-
-    .abp-card__body{
-        padding:18px;
-    }
-
-    .abp-card__title{
-        font-size:1rem;
-    }
-}
-
-/* =================================
-   Small Mobile
-================================= */
-@media (max-width:380px){
-
-    .abp-card__body{
-        padding:16px;
-    }
-
-    .abp-card__title{
-        font-size:.95rem;
-    }
+@media (min-width: 2560px) {
+  .abp-card__title {
+    font-size: 22px;
+  }
 }
 
 /* PDF */
 .docvault-section {
-  padding: clamp(60px, 6vw, 100px) 0;
+  padding: 80px 0;
   background: var(--lavender-light);
+}
+
+@media (max-width: 767px) {
+  .docvault-section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .docvault-section {
+    padding: 100px 0;
+  }
 }
 
 .docvault-header {
@@ -1967,9 +3373,40 @@ section.hernia-repair::before {
 .docvault-subtext {
   margin-top: 16px;
   color: var(--text-mid);
-  font-size: 1.05rem;
+  font-size: 18px;
   line-height: 1.6;
   text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .docvault-subtext {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .docvault-subtext {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .docvault-subtext {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  .docvault-subtext {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .docvault-subtext {
+    font-size: 18px;
+  }
 }
 
 .docvault-grid {
@@ -1977,7 +3414,38 @@ section.hernia-repair::before {
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   padding: 20px;
-  
+
+}
+
+@media (max-width:479px) {
+  .docvault-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width:480px) and (max-width:767px) {
+  .docvault-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .docvault-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .docvault-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width:1200px) {
+  .docvault-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .docvault-card {
@@ -2013,9 +3481,27 @@ section.hernia-repair::before {
 
 .docvault-card h3 {
   color: var(--text-dark);
-  font-size: 1.15rem;
+  font-size: 19px;
   font-weight: 600;
   margin: 0;
+}
+
+@media (max-width: 479px) {
+  .docvault-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .docvault-card h3 {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) {
+  .docvault-card h3 {
+    font-size: 19px;
+  }
 }
 
 .docvault-btn {
@@ -2038,25 +3524,4 @@ section.hernia-repair::before {
   transform: translateY(-2px);
   border: 2px solid var(--plum-bright);
   color: var(--plum-bright);
-}
-@media (max-width:479px){
-  .docvault-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-@media (min-width:480px) and (max-width:767px){
-  .docvault-grid{
-        grid-template-columns:1fr;
-    }
-}
-@media (min-width:992px) and (max-width:1199px){
-  .docvault-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-}
-@media (min-width:768px) and (max-width:991px){
-  .docvault-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
