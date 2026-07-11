@@ -837,7 +837,7 @@ img {
 .section-desc {
   font-size: 18px;
   color: #000;
-  padding-bottom: 25px;
+  
   font-family: "Poppins", sans-serif;
   text-align: justify;
 }
@@ -3347,7 +3347,7 @@ section.hernia-repair::before {
 
 @media (min-width: 768px) {
   .docvault-section {
-    padding: 100px 0;
+    padding: 57px 0;
   }
 }
 
