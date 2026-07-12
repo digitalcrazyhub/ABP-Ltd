@@ -1,4 +1,5 @@
-/** Poppins Font **/
+
+  /** Poppins Font **/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -515,11 +516,11 @@ img {
 }
 
 .abp-hero-content {
-  grid-area: "content";
+  grid-area: content;
 }
 
 .abp-hero__image {
-  grid-area: "image";
+  grid-area: image;
 }
 
 .abp-hero__eyebrow {
@@ -567,7 +568,7 @@ img {
 
 @media (min-width: 1440px) and (max-width: 1919px) {
   .abp-hero__heading {
-    font-size: 56px;
+    font-size:48px;
   }
 }
 
@@ -1813,8 +1814,14 @@ section.hernia-repair::before {
 
 .type-grid {
   display: grid;
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
+}
+
+@media (max-width: 767px) {
+  .type-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .type-item {
@@ -3524,4 +3531,143 @@ section.hernia-repair::before {
   transform: translateY(-2px);
   border: 2px solid var(--plum-bright);
   color: var(--plum-bright);
+}
+
+/* ======================================================
+   SCROLL-REVEAL ANIMATION SYSTEM
+====================================================== */
+
+@keyframes abpFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes abpPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(161, 61, 132, 0.35); }
+  50% { box-shadow: 0 0 0 10px rgba(161, 61, 132, 0); }
+}
+
+/* Elements start hidden/offset, then animate into place once
+   they enter the viewport (class toggled by IntersectionObserver). */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal--left {
+  transform: translateX(-32px);
+}
+
+.reveal.reveal--right {
+  transform: translateX(32px);
+}
+
+.reveal.reveal--scale {
+  transform: scale(.92);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger children inside a revealed grid so cards cascade in
+   rather than popping together */
+.prolapse-grid.is-visible .prolapse-card,
+.sg-case-grid.is-visible .sg-case-card,
+.abp-cards-grid.is-visible .abp-card,
+.docvault-grid.is-visible .docvault-card,
+.type-grid.is-visible .type-item {
+  animation: abpCardIn .6s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.prolapse-grid .prolapse-card:nth-child(1), .sg-case-grid .sg-case-card:nth-child(1), .abp-cards-grid .abp-card:nth-child(1), .docvault-grid .docvault-card:nth-child(1), .type-grid .type-item:nth-child(1) { animation-delay: .05s; }
+.prolapse-grid .prolapse-card:nth-child(2), .sg-case-grid .sg-case-card:nth-child(2), .abp-cards-grid .abp-card:nth-child(2), .docvault-grid .docvault-card:nth-child(2), .type-grid .type-item:nth-child(2) { animation-delay: .12s; }
+.prolapse-grid .prolapse-card:nth-child(3), .sg-case-grid .sg-case-card:nth-child(3), .abp-cards-grid .abp-card:nth-child(3), .docvault-grid .docvault-card:nth-child(3), .type-grid .type-item:nth-child(3) { animation-delay: .19s; }
+.prolapse-grid .prolapse-card:nth-child(4), .sg-case-grid .sg-case-card:nth-child(4), .abp-cards-grid .abp-card:nth-child(4), .type-grid .type-item:nth-child(4) { animation-delay: .26s; }
+.prolapse-grid .prolapse-card:nth-child(5), .type-grid .type-item:nth-child(5) { animation-delay: .33s; }
+.prolapse-grid .prolapse-card:nth-child(6), .type-grid .type-item:nth-child(6) { animation-delay: .4s; }
+
+@keyframes abpCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pathway (procedure) steps slide in from the left, node pulses once revealed */
+.proc {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.proc.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.proc.is-visible .proc-node {
+  animation: abpPulse 1.8s ease-out 1;
+}
+
+/* Extra hover motion */
+.du-icon {
+  transition: transform .45s cubic-bezier(.34,1.56,.64,1);
+}
+
+.du-header:hover .du-icon {
+  transform: rotate(90deg) scale(1.08);
+}
+
+.docvault-icon {
+  transition: transform .4s ease;
+}
+
+.docvault-card:hover .docvault-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.size-chip {
+  animation: none;
+}
+
+.sizes-grid.is-visible .size-chip {
+  animation: abpCardIn .5s ease both;
+}
+
+.sizes-grid .size-chip:nth-child(1) { animation-delay: .02s; }
+.sizes-grid .size-chip:nth-child(2) { animation-delay: .06s; }
+.sizes-grid .size-chip:nth-child(3) { animation-delay: .1s; }
+.sizes-grid .size-chip:nth-child(4) { animation-delay: .14s; }
+.sizes-grid .size-chip:nth-child(5) { animation-delay: .18s; }
+.sizes-grid .size-chip:nth-child(6) { animation-delay: .22s; }
+.sizes-grid .size-chip:nth-child(7) { animation-delay: .26s; }
+.sizes-grid .size-chip:nth-child(8) { animation-delay: .3s; }
+.sizes-grid .size-chip:nth-child(9) { animation-delay: .34s; }
+.sizes-grid .size-chip:nth-child(10) { animation-delay: .38s; }
+.sizes-grid .size-chip:nth-child(11) { animation-delay: .42s; }
+.sizes-grid .size-chip:nth-child(12) { animation-delay: .46s; }
+.sizes-grid .size-chip:nth-child(13) { animation-delay: .5s; }
+
+/* Respect users who've asked for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .proc {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

@@ -58,7 +58,7 @@
           </p>
           <a href="../indications/Soft Tissue Reinforcement/White paper_SM Soft Tissue Repair.pdf"
             class="abp-hero__cta" target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer" style="align-items: center;align-self: center;justify-content: center;align-content: center;text-align: center;">
             <i class="fa-solid fa-download"></i> Download Brochure
           </a>
         </div>
@@ -93,15 +93,15 @@
 
       <!-- Hero strip -->
       <div class="hero-strip">
-        <div class="hero-img-card">
+        <div class="hero-img-card reveal reveal--left">
           <img src="../image/Types of Hernia.jpg" alt="Illustration of common hernia types">
         </div>
         <div class="hero-side">
-          <div class="shelf-card">
+          <div class="shelf-card reveal reveal--right">
             <div class="big">3 Years</div>
             <div class="label">Clinically usable shelf life at room temperature.</div>
           </div>
-          <div class="quickfacts">
+          <div class="quickfacts reveal reveal--right">
             <ul>
               <li><b>Bioresorbable </b> — degrades as native tissue regrows for lasting strength</li>
               <li><b>No washing</b> needed prior to use</li>
@@ -113,11 +113,11 @@
 
       <!-- Types of hernia -->
       <div class="types-block">
-        <div class="types-visual">
+        <div class="types-visual reveal reveal--left">
           <img src="../image/Types of hernia(1).jpg" alt="Diagram of abdominal hernia locations">
           <div class="cap">Hernia sites across the abdominal wall and groin</div>
         </div>
-        <div class="types-text">
+        <div class="types-text reveal reveal--right">
           <h3>Hernia Sites</h3>
           <div class="type-grid">
             <div class="type-item">
@@ -298,7 +298,7 @@
         with new host tissue.</p>
     </div>
 
-    <div class="prolapse-grid">
+    <div class="prolapse-grid reveal">
 
       <!-- CARD 1 -->
       <div class="prolapse-card">
@@ -433,7 +433,7 @@
     <!-- Images Row -->
     <section class="abp-cards">
       <div class="abp-container">
-        <div class="abp-cards-grid">
+        <div class="abp-cards-grid reveal">
           <div class="abp-card abp-reveal abp-visible">
             <img src="../image/H1.png" class="abp-card__img" alt="Before Surgery">
             <div class="abp-card__body">
@@ -502,7 +502,7 @@
           reducing the risk of anastomotic leakage and associated complications.
         </p>
 
-        <div class="gastro-case-card">
+        <div class="gastro-case-card reveal reveal--scale">
           <div class="gastro-case-label">
             Published Case Series — JCDR 2024
           </div>
@@ -544,7 +544,7 @@
       <h2>For Soft Tissue Repair &amp; Reconstruction</h2>
     </div>
 
-    <div class="sg-case-grid">
+    <div class="sg-case-grid reveal">
       <div class="sg-case-card">
         <div class="sg-case-image">
           <img src="../image/skin-1.png" alt="Day 1">
@@ -587,7 +587,7 @@
       <h2>Burn Reconstruction</h2>
     </div>
 
-    <div class="sg-case-grid">
+    <div class="sg-case-grid reveal">
       <div class="sg-case-card">
         <div class="sg-case-image">
           <img src="../image/B1.jpeg" alt="Burn reconstruction wound on day zero">
@@ -630,7 +630,7 @@
       <h2>Sacral Pressure Sore</h2>
     </div>
 
-    <div class="sg-case-grid">
+    <div class="sg-case-grid reveal">
       <div class="sg-case-card">
         <div class="sg-case-image">
           <img src="../image/P1.jpeg" alt="Stage 4 sacral pressure sore">
@@ -664,7 +664,7 @@
       <h2>Keloid Excision and Closure</h2>
     </div>
 
-    <div class="sg-case-grid">
+    <div class="sg-case-grid reveal">
       <div class="sg-case-card">
         <div class="sg-case-image">
           <img src="../image/K1.png" alt="Keloid excision wound on day zero">
@@ -712,7 +712,7 @@
       <p class="docvault-subtext">Review or download comprehensive specifications, product literature, and peer-reviewed publications.</p>
     </div>
 
-    <div class="docvault-grid">
+    <div class="docvault-grid reveal">
       <div class="docvault-card">
         <div class="docvault-icon"><i class="fa-solid fa-file-pdf"></i></div>
         <h3>Pelvic Floor Reconstruction</h3>
@@ -743,7 +743,7 @@
   <div class="sizes-section">
     <h2>Surgicoll-Mesh<sup>®</sup> Available Sizes</h2>
     <p>Choose from our wide range of standard sizes (in cm). Custom sizes available on request.</p>
-    <div class="sizes-grid">
+    <div class="sizes-grid reveal">
       <div class="size-chip">5 × 5</div>
       <div class="size-chip">2 × 25</div>
       <div class="size-chip">5 × 10</div>
@@ -772,6 +772,28 @@
   </script>
 
   <script src="../js/nav.js"></script>
+
+  <!-- Scroll-reveal: fades/slides sections and card grids into view as
+       the visitor scrolls, and pulses each procedure step once shown -->
+  <script>
+    (function () {
+      var targets = document.querySelectorAll('.reveal, .proc');
+      if (!('IntersectionObserver' in window) || !targets.length) {
+        targets.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 
 </html>

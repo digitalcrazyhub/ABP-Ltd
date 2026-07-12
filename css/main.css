@@ -134,6 +134,7 @@ section {
   background: var(--gradient-bar);
   border-radius: 3px;
   margin: 16px 0;
+  overflow: hidden;
 }
 
 .divider.center {
@@ -268,6 +269,9 @@ section {
   gap: 8px;
   transition: all .25s;
   box-shadow: 0 6px 24px rgba(107, 45, 92, .35);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .btn-primary:hover {
@@ -275,6 +279,30 @@ section {
   color: var(--purple-brand);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(107, 45, 92, .4);
+}
+
+.btn-primary i {
+  transition: transform .3s ease;
+}
+
+.btn-primary:hover i {
+  transform: translateX(4px);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255, .35);
+  transform: translateX(-150%) skewX(-15deg);
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  animation: shimmerSweep .85s ease forwards;
 }
 
 .image-box {
@@ -323,6 +351,11 @@ section {
   text-align: center;
   padding: 18px 10px;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform .35s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
 }
 
 .stat-item:first-child {
@@ -378,6 +411,11 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform .6s ease;
+}
+
+.about-img-main:hover img {
+  transform: scale(1.06);
 }
 
 .about-img-main svg {
@@ -417,8 +455,19 @@ section {
   font-family: "poppins", sans serif;
   line-height: 1.75;
   margin-bottom: 6px;
-
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity .5s ease, transform .5s ease;
 }
+
+.reveal.visible .tag-list li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tag-list li:nth-child(1) { transition-delay: .05s; }
+.tag-list li:nth-child(2) { transition-delay: .2s; }
+.tag-list li:nth-child(3) { transition-delay: .35s; }
 
 /* ─── SERVICES ─── */
 #services {
@@ -436,7 +485,7 @@ section {
   border-radius: var(--radius);
   padding: 28px 24px;
   border: 1px solid var(--border);
-  transition: transform .3s, box-shadow .3s, background .3s;
+  transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -452,7 +501,7 @@ section {
 
 .service-card:hover {
   background: var(--plum-bright);
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-lg);
 }
 
@@ -469,6 +518,12 @@ section {
 .sc-link {
   color: var(--white);
   text-decoration: none;
+  display: inline-block;
+  transition: transform .35s ease;
+}
+
+.service-card:hover .sc-link {
+  transform: scale(1.08);
 }
 
 .sc-title {
@@ -497,6 +552,13 @@ section {
   background: var(--purple-brand);
   margin: 18px auto;
   border-radius: 50px;
+  transform: scaleX(0);
+  transition: transform .6s ease;
+  transform-origin: center;
+}
+
+.reveal.visible .title-line {
+  transform: scaleX(1);
 }
 
 .section-title p {
@@ -513,12 +575,12 @@ section {
 }
 
 .testimonial-card {
-  background: var(--off-white);
+  background: var(--lavender-light);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow-sm);
-  transition: .35s;
+  transition: transform .35s ease, box-shadow .35s ease;
   display: flex;
   flex-direction: column;
 }
@@ -595,6 +657,12 @@ section {
   font-weight: 600;
   line-height: 1.6;
   color: var(--text-dark);
+  transition: color .3s ease, padding-left .3s ease;
+}
+
+.faq-q:hover {
+  color: var(--purple-brand);
+  padding-left: 6px;
 }
 
 .faq-q span:first-child {
@@ -623,6 +691,7 @@ section {
 
 .faq-item.active .faq-arrow {
   background: var(--cyan);
+  transform: scale(1.08);
 }
 
 .faq-item.active .faq-arrow svg {
@@ -675,10 +744,101 @@ section {
   will-change: transform, opacity;
 }
 
+/* ─── HERO ENTRANCE ANIMATIONS (play once on load, no scroll trigger) ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(.82); }
+  70% { transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(22px, -26px) rotate(8deg); }
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(260%) skewX(-15deg); }
+}
+
+.hero-badge {
+  animation: popIn .7s ease both;
+}
+
+.hero-h1 {
+  animation: fadeInUp .8s ease .15s both;
+}
+
+.hero-sub {
+  animation: fadeInUp .8s ease .3s both;
+}
+
+.hero-sub:nth-of-type(2) {
+  animation-delay: .45s;
+}
+
+.hero-sub:nth-of-type(3) {
+  animation-delay: .6s;
+}
+
+.hero-btns {
+  animation: fadeInUp .8s ease .75s both;
+}
+
+.image-box {
+  animation: fadeInRight 1s ease .3s both;
+}
+
+.floating-img {
+  animation: floatY 5s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.hc1 {
+  animation: floatSlow 11s ease-in-out infinite;
+}
+
+.hc2 {
+  animation: floatSlow 14s ease-in-out infinite reverse;
+}
+
+.hc3 {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
-  .reveal {
+  .reveal,
+  .hero-badge,
+  .hero-badge-dot,
+  .hero-h1,
+  .hero-sub,
+  .hero-btns,
+  .image-box,
+  .floating-img,
+  .hc1,
+  .hc2,
+  .hc3,
+  .btn-primary::before,
+  .tag-list li,
+  .title-line {
     transition: none !important;
+    animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
@@ -873,6 +1033,7 @@ section {
 
   .faq-grid {
     grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .about-grid {
@@ -1097,7 +1258,7 @@ section {
   }
 
   h2 {
-    font-size: 42px !important;
+    font-size: 34px !important;
   }
 
   h3 {
@@ -1177,11 +1338,11 @@ section {
   }
 
   h2 {
-    font-size: 44px !important;
+    font-size: 36px !important;
   }
 
   h3 {
-    font-size: 36px !important;
+    font-size: 28px !important;
   }
 
   p {
@@ -1230,7 +1391,7 @@ section {
 .about-content{
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    
 }
 
 .about-content p,
@@ -1256,7 +1417,7 @@ section {
   }
 
   h2 {
-    font-size: 48px !important;
+    font-size: 38px !important;
   }
 
   h3 {
